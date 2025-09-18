@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xelwel.manipal"
+    namespace = "com.xelwel.gwt"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 
@@ -20,7 +20,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.xelwel.manipal"
+        applicationId = "com.xelwel.gwt"
         minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
@@ -30,12 +30,12 @@ android {
 
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 
     signingConfigs {
@@ -53,6 +53,11 @@ android {
             isShrinkResources = true
             signingConfig = signingConfigs.getByName("release")
         }
+        debug {
+            // Optional: keep debug signed automatically by Gradle
+            isMinifyEnabled = false
+            isShrinkResources = false
+        }
     }
 }
 
@@ -61,6 +66,6 @@ flutter {
 }
 
 dependencies {
-    // For AGP 7.4+
+    // Desugaring for Java 11+ APIs on older Android devices
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 }

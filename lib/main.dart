@@ -37,7 +37,7 @@ void main() async {
 
   // await requestNotificationPermission();
 
-  Config.setHomeUrl("https://manipal.smarthajiri.com");
+  // Config.setHomeUrl("https://manipal.smarthajiri.com");
   // Config.setHomeUrl("https://heliosnepal.smarthajiri.com");
   // Config.setHomeUrl("https://hris.careerinnepal.com");
   // Config.setHomeUrl("https://manaramhr.xelwel.com");
@@ -47,15 +47,17 @@ void main() async {
   // Config.setHomeUrl("https://ehpl.xelwel.com");
   // Config.setHomeUrl("https://mediplus.smarthajiri.com/");
   // Config.setHomeUrl("https://medibiz.xelwel.com");
+  Config.setHomeUrl("https://gwt.xelwel.com");
 
   // Change login image
-  Config.setLoginImage("assets/logo/logo.png");
+  Config.setLoginImage("assets/logo/gwt_logo.jpg");
+  // Config.setLoginImage("assets/images/gwt_logo.jpg");
 
   // Change Splash Image
-  Config.setSplashImage("assets/logo/logo.png");
+  Config.setSplashImage("assets/logo/gwt_logo.jpg");
 
   // App Name and version
-  Config.setApkName("Manipal");
+  Config.setApkName("GWT");
   Config.setAppVersion("3.4.8");
 
   Future.delayed(Duration(seconds: 2), () {

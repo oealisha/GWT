@@ -170,13 +170,22 @@ class _LoginPageViewState extends State<LoginPageView> {
                                       const SizedBox(height: 20),
                                       Center(
                                         child: Image.asset(
-                                          "assets/logo/logo.png",
+                                          "assets/logo/gwt_logo.jpg",
                                           height: 73,
                                           width: 153,
                                         ),
                                       ),
                                       const SizedBox(height: 20),
                                       const Center(
+                                        //  child: Text(
+                                        //   'Gurkha Welfare Trust',
+                                        //   style: TextStyle(
+                                        //     fontSize: 24,
+                                        //     fontWeight: FontWeight.bold,
+                                        //     color: Colors.black,
+                                        //   ),
+                                        // ),
+
                                         child: Text(
                                           'Login',
                                           style: TextStyle(
